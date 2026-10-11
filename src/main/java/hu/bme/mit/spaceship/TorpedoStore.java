@@ -8,6 +8,7 @@ import java.util.Random;
 * (Deliberately contains bugs.)
 */
 public class TorpedoStore {
+     // Single shared generator, reused on every fire() call (SonarQube rule java:S2119)
   private final Random generator = new Random();
 
   // rate of failing to fire torpedos [0.0, 1.0]
